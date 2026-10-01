@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suspicious Link Checker | SCAMSHIELD</title>
+  <meta name="description" content="An educational heuristic URL checker demonstrating how automated web security systems inspect domain structures, protocol safety, and keywords for phishing indicators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand">
+          <span class="brand-name">SCAMSHIELD</span>
+          <span class="brand-tagline">Think Before You Click.</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link">Learn</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="about.html">About Fraud Lifecycle</a></li>
+              <li class="dropdown-item"><a href="scams.html">Common Scam Types</a></li>
+              <li class="dropdown-item"><a href="phishing.html">Phishing Awareness</a></li>
+              <li class="dropdown-item"><a href="upi-scams.html">UPI and Payment Scams</a></li>
+              <li class="dropdown-item"><a href="banking-scams.html">Banking and OTP Frauds</a></li>
+              <li class="dropdown-item"><a href="social-media-scams.html">Social Media Traps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="link-checker.html" class="nav-link active">Tools</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="simulator.html">Scam Simulator</a></li>
+              <li class="dropdown-item"><a href="link-checker.html">Suspicious Link Checker</a></li>
+              <li class="dropdown-item"><a href="quiz.html">Cyber Safety Quiz</a></li>
+              <li class="dropdown-item"><a href="password-safety.html">Password Strength Checker</a></li>
+              <li class="dropdown-item"><a href="checklist.html">Interactive Safety Checklist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="after-scam.html" class="nav-link">Safety Guide</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Tools</span>
+        <span>/</span>
+        <span>Suspicious Link Checker</span>
+      </nav>
+      <h1 class="page-title">Suspicious Link Heuristic Inspector</h1>
+      <p class="page-lead">
+        Learn how security filters inspect URLs for common anomalies. Test a web link to observe heuristic checks in real time.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container container-narrow">
+
+      <!-- Prominent Educational Disclaimer -->
+      <div class="notice-box notice-disclaimer" style="margin-top: 0; margin-bottom: 28px;">
+        <strong>Educational Heuristic Notice:</strong> This is an educational heuristic checker. It cannot guarantee that a website is safe or malicious. Advanced malicious campaigns can reside on clean domains, and legitimate subdomains can trigger rule flags. This tool illustrates common structural evaluation techniques used in cybersecurity.
+      </div>
+
+      <!-- Checker Form Card -->
+      <div class="card card-accent-sage">
+        <form id="linkCheckerForm">
+          <div class="form-group">
+            <label for="urlInput" class="form-label">Enter a URL or Web Address to Inspect</label>
+            <input 
+              type="text" 
+              id="urlInput" 
+              class="form-control" 
+              placeholder="e.g., https://example-login-portal.tk/verify" 
+              required
+              autocomplete="off"
+            >
+            <div class="form-hint">Paste any link to analyze its structural components.</div>
+          </div>
+
+          <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary">Inspect Link</button>
+            <button type="button" id="sampleSafe" class="btn btn-secondary btn-sm">Sample: Official Bank Link</button>
+            <button type="button" id="samplePhish" class="btn btn-secondary btn-sm">Sample: Phishing Link</button>
+            <button type="button" id="sampleIp" class="btn btn-secondary btn-sm">Sample: IP Address URL</button>
+          </div>
+        </form>
+
+        <!-- Results Injection Container -->
+        <div id="checkerResults" style="display: none;"></div>
+      </div>
+
+      <!-- Educational Explanation of Heuristics -->
+      <div style="margin-top: 48px;">
+        <span class="meta-label">Technical Background</span>
+        <h2 class="section-title">How Heuristic URL Detection Operates</h2>
+        <p class="section-subtitle">
+          In computer networking and security systems, heuristic inspection evaluates risk probability based on structural traits rather than static blacklists alone.
+        </p>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title-sm">1. Hostname vs. Path</h3>
+            <p class="body-secondary">
+              A standard URL is composed of: <code>https://hostname/path</code>. Attackers often place legitimate brand names in the subfolder or subdomain (such as <code>sbi.portal.ru/login</code>) where the actual domain being contacted is <code>portal.ru</code>.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-sm">2. IP Address Hostnames</h3>
+            <p class="body-secondary">
+              Legitimate commercial organizations almost universally host consumer services on registered domain names with SSL certificates. Raw IP addresses (e.g. <code>192.0.2.1</code>) in links are strong red flags.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-sm">3. Low-Cost Disposable TLDs</h3>
+            <p class="body-secondary">
+              Free or ultra-cheap top-level domains (such as .tk, .ga, .cf, .xyz, .buzz) have historically experienced higher rates of disposable fraud campaigns because attackers can register thousands of domains cheaply.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-sm">4. Character Manipulation</h3>
+            <p class="body-secondary">
+              The inclusion of special characters like the '@' symbol instructs standard web browsers to ignore everything preceding the symbol and resolve exclusively to whatever follows it, deceiving unwary users.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="brand-name" style="margin-bottom: 6px;">SCAMSHIELD</h4>
+          <p class="brand-tagline" style="margin-bottom: 14px;">Think Before You Click.</p>
+          <p class="body-secondary">
+            B.Sc. Information Technology academic project designed for undergraduate viva demonstration and public cybersecurity education.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Learn</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Scam Lifecycle</a></li>
+            <li><a href="scams.html">All Scam Types</a></li>
+            <li><a href="phishing.html">Phishing Identification</a></li>
+            <li><a href="upi-scams.html">UPI Payment Safety</a></li>
+            <li><a href="banking-scams.html">Banking and OTP</a></li>
+            <li><a href="social-media-scams.html">Social Media Traps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Tools</h5>
+          <ul class="footer-links">
+            <li><a href="simulator.html">Scam Simulator</a></li>
+            <li><a href="link-checker.html">Link Checker</a></li>
+            <li><a href="quiz.html">Safety Quiz</a></li>
+            <li><a href="password-safety.html">Password Checker</a></li>
+            <li><a href="checklist.html">Safety Checklist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Emergency Help</h5>
+          <p class="body-secondary" style="margin-bottom: 10px;">
+            National Cyber Crime Helpline (India): <strong>1930</strong>
+          </p>
+          <p class="body-secondary" style="margin-bottom: 14px;">
+            Official Portal: <strong>cybercrime.gov.in</strong>
+          </p>
+          <div class="btn-group">
+            <a href="after-scam.html" class="btn btn-secondary btn-sm">Incident Guide</a>
+            <a href="feedback.html" class="btn btn-secondary btn-sm">Project Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>SCAMSHIELD Academic Project - B.Sc. Information Technology (Year 2)</div>
+        <div>Designed with HTML5, CSS3, and Vanilla JavaScript. No tracking, purely educational.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

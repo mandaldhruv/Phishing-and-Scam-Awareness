@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCAMSHIELD | Phishing, Scam and Fraud Detection Awareness</title>
+  <meta name="description" content="An educational awareness website designed to help everyday citizens identify phishing attacks, UPI payment fraud, and digital deceptive traps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand">
+          <span class="brand-name">SCAMSHIELD</span>
+          <span class="brand-tagline">Think Before You Click.</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link">Learn</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="about.html">About Fraud Lifecycle</a></li>
+              <li class="dropdown-item"><a href="scams.html">Common Scam Types</a></li>
+              <li class="dropdown-item"><a href="phishing.html">Phishing Awareness</a></li>
+              <li class="dropdown-item"><a href="upi-scams.html">UPI and Payment Scams</a></li>
+              <li class="dropdown-item"><a href="banking-scams.html">Banking and OTP Frauds</a></li>
+              <li class="dropdown-item"><a href="social-media-scams.html">Social Media Traps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="simulator.html" class="nav-link">Tools</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="simulator.html">Scam Simulator</a></li>
+              <li class="dropdown-item"><a href="link-checker.html">Suspicious Link Checker</a></li>
+              <li class="dropdown-item"><a href="quiz.html">Cyber Safety Quiz</a></li>
+              <li class="dropdown-item"><a href="password-safety.html">Password Strength Checker</a></li>
+              <li class="dropdown-item"><a href="checklist.html">Interactive Safety Checklist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="after-scam.html" class="nav-link">Safety Guide</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="section" style="padding-top: 56px; padding-bottom: 56px;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
+          <div>
+            <span class="tag tag-sage" style="margin-bottom: 14px;">B.Sc. Information Technology Project</span>
+            <h1 class="hero-title">Think Before You Click.</h1>
+            <p class="section-subtitle">
+              Learn how to recognize phishing, online scams and digital fraud before they become a problem. A student-led educational platform focused on everyday digital defense.
+            </p>
+            <div class="btn-group">
+              <a href="scams.html" class="btn btn-primary">Explore Scam Types</a>
+              <a href="quiz.html" class="btn btn-secondary">Test Your Knowledge</a>
+            </div>
+          </div>
+
+          <!-- Minimal Subtle Line Art Illustration (No futuristic neon locks) -->
+          <div class="editorial-visual" style="min-height: 280px; text-align: center;">
+            <svg width="220" height="220" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Calm shield illustration">
+              <rect x="25" y="25" width="150" height="150" rx="12" fill="#F7F3EC" stroke="#756A5E" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M100 45V155" stroke="#A8B5A0" stroke-width="2"/>
+              <path d="M55 100H145" stroke="#A8B5A0" stroke-width="2"/>
+              <circle cx="100" cy="100" r="38" fill="#FFFDF9" stroke="#242320" stroke-width="2"/>
+              <path d="M88 100L96 108L114 90" stroke="#7F896F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="100" cy="100" r="48" stroke="#C98F78" stroke-width="1" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Know the Warning Signs -->
+    <section class="section section-alt">
+      <div class="container">
+        <span class="meta-label">Fundamentals</span>
+        <h2 class="section-title">Know the Warning Signs</h2>
+        <p class="section-subtitle">
+          Online fraudsters rely on predictable psychological pressure tactics. If an interaction contains any of these four elements, pause immediately.
+        </p>
+
+        <div class="grid grid-4">
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-terracotta" style="margin-bottom: 8px;">Trigger 01</span>
+            <h3 class="card-title">Artificial Urgency</h3>
+            <p class="body-secondary">
+              Threats of immediate electricity disconnection, bank account suspension, or courier return within hours are designed to stop logical evaluation.
+            </p>
+          </div>
+
+          <div class="card card-accent-sage">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Trigger 02</span>
+            <h3 class="card-title">Suspicious Links</h3>
+            <p class="body-secondary">
+              Deceptive URLs containing typos, free domain extensions (.tk, .xyz), or misleading hyphens designed to impersonate trustworthy portals.
+            </p>
+          </div>
+
+          <div class="card card-accent-charcoal">
+            <span class="tag" style="margin-bottom: 8px;">Trigger 03</span>
+            <h3 class="card-title">Requests for OTP or PIN</h3>
+            <p class="body-secondary">
+              Any person, caller, or form asking for your One-Time Password, ATM PIN, or UPI PIN. Remember: PIN is required only to send money, never to receive.
+            </p>
+          </div>
+
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-terracotta" style="margin-bottom: 8px;">Trigger 04</span>
+            <h3 class="card-title">Unrealistic Offers</h3>
+            <p class="body-secondary">
+              Unsolicited part-time jobs offering Rs. 5,000 daily for liking videos, lottery wins for contests you never entered, or massive guaranteed crypto returns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Common Scams -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span class="meta-label">Categories</span>
+            <h2 class="section-title">Prevalent Scam Types</h2>
+            <p class="body-secondary">Detailed guides explaining methods, real-world examples, and protective actions.</p>
+          </div>
+          <a href="scams.html" class="btn btn-secondary btn-sm">View All Categories</a>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="phishing.html" class="card card-clickable">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Deceptive Messaging</span>
+            <h3 class="card-title">Email and SMS Phishing</h3>
+            <p class="body-secondary">
+              How spoofed emails, text alerts, and counterfeit login portals fool users into revealing credentials.
+            </p>
+          </a>
+
+          <a href="upi-scams.html" class="card card-clickable">
+            <span class="tag tag-terracotta" style="margin-bottom: 8px;">Payment Gateway</span>
+            <h3 class="card-title">UPI and Payment Fraud</h3>
+            <p class="body-secondary">
+              Reverse QR code scams, fraudulent collect requests, and marketplace buying tricks that debit your account.
+            </p>
+          </a>
+
+          <a href="banking-scams.html" class="card card-clickable">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Account Security</span>
+            <h3 class="card-title">Banking and OTP Frauds</h3>
+            <p class="body-secondary">
+              Bogus KYC SMS alerts, card renewal calls, and social-engineering tactics used to steal two-factor codes.
+            </p>
+          </a>
+
+          <a href="scams.html" class="card card-clickable">
+            <span class="tag" style="margin-bottom: 8px;">Impersonation</span>
+            <h3 class="card-title">Fake Customer Support</h3>
+            <p class="body-secondary">
+              Manipulated search engine results and spoofed toll-free numbers that direct users to imposters.
+            </p>
+          </a>
+
+          <a href="social-media-scams.html" class="card card-clickable">
+            <span class="tag tag-terracotta" style="margin-bottom: 8px;">Social Media</span>
+            <h3 class="card-title">Social Media and Impersonation</h3>
+            <p class="body-secondary">
+              Cloned accounts, fake giveaway contests, and hijacked profiles sending urgent emergency requests.
+            </p>
+          </a>
+
+          <a href="scams.html" class="card card-clickable">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Employment Traps</span>
+            <h3 class="card-title">Work From Home Job Frauds</h3>
+            <p class="body-secondary">
+              Task-based rating scams, fake recruitment letters, and registration fee extortion schemes.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Learn. Check. Stay Safe. -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+          <span class="meta-label">The Project Philosophy</span>
+          <h2 class="section-title">Learn. Check. Stay Safe.</h2>
+          <p class="body-large" style="margin-bottom: 24px;">
+            Cyber defense is not just about complex algorithms. It starts with simple human habits: pausing before clicking, verifying senders through official channels, and understanding how modern payment systems function.
+          </p>
+        </div>
+
+        <div class="grid grid-3" style="margin-top: 32px;">
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--color-sage-dark); margin-bottom: 8px;">01</div>
+            <h3 class="card-title">Learn the Mechanics</h3>
+            <p class="body-secondary">
+              Understand the step-by-step lifecycle used by scammers so you can spot their playbook as it unfolds.
+            </p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--color-terracotta); margin-bottom: 8px;">02</div>
+            <h3 class="card-title">Check the Indicators</h3>
+            <p class="body-secondary">
+              Use our interactive tools to inspect suspicious link structures, test your scam radar, and evaluate password strength.
+            </p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--color-charcoal); margin-bottom: 8px;">03</div>
+            <h3 class="card-title">Take Decisive Action</h3>
+            <p class="body-secondary">
+              Follow established emergency reporting steps, freeze affected financial accounts, and file reports with official authorities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Interactive Tools Preview -->
+    <section class="section">
+      <div class="container">
+        <span class="meta-label">Interactive Practice</span>
+        <h2 class="section-title">Student Educational Tools</h2>
+        <p class="section-subtitle">
+          Practice identifying deceptive patterns with our five lightweight browser-based tools.
+        </p>
+
+        <div class="grid grid-2">
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-terracotta" style="margin-bottom: 8px;">Interactive Simulator</span>
+            <h3 class="card-title">Scam Message Simulator</h3>
+            <p class="body-secondary" style="margin-bottom: 16px;">
+              Review 10 real-world scenarios representing SMS, WhatsApp, and email alerts. Practice categorizing them as safe or suspicious and learn the hidden red flags.
+            </p>
+            <a href="simulator.html" class="btn btn-secondary btn-sm">Launch Simulator</a>
+          </div>
+
+          <div class="card card-accent-sage">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Educational URL Inspector</span>
+            <h3 class="card-title">Suspicious Link Checker</h3>
+            <p class="body-secondary" style="margin-bottom: 16px;">
+              Paste any URL to view an educational breakdown of heuristic risk factors: protocol safety, IP-based domains, keyword stuffing, and suspicious subdomains.
+            </p>
+            <a href="link-checker.html" class="btn btn-secondary btn-sm">Inspect a Link</a>
+          </div>
+
+          <div class="card card-accent-charcoal">
+            <span class="tag" style="margin-bottom: 8px;">Knowledge Assessment</span>
+            <h3 class="card-title">Cyber Safety Quiz</h3>
+            <p class="body-secondary" style="margin-bottom: 16px;">
+              Evaluate your awareness across 12 practical multiple-choice questions covering banking, UPI, caller deception, and password management.
+            </p>
+            <a href="quiz.html" class="btn btn-secondary btn-sm">Take the Quiz</a>
+          </div>
+
+          <div class="card card-accent-sage">
+            <span class="tag tag-sage" style="margin-bottom: 8px;">Client-Side Evaluator</span>
+            <h3 class="card-title">Password Strength and Privacy</h3>
+            <p class="body-secondary" style="margin-bottom: 16px;">
+              Test password robustness locally in your browser. Understand entropy, length requirements, and common attack dictionary patterns.
+            </p>
+            <a href="password-safety.html" class="btn btn-secondary btn-sm">Check Password Health</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Golden Rules Summary -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="card card-accent-terracotta" style="background-color: var(--color-white); padding: 32px;">
+          <span class="meta-label">Essential Golden Rule</span>
+          <h3 class="section-title" style="margin-top: 6px; margin-bottom: 10px;">Three Things Legitimate Organizations Never Do</h3>
+          <ul style="padding-left: 20px; line-height: 1.8; color: var(--color-charcoal); margin-bottom: 16px;">
+            <li><strong>Never demand your OTP or UPI PIN:</strong> Bank officials and customer care will never ask for your one-time password or security PIN over phone, chat, or email.</li>
+            <li><strong>Never require a PIN to receive funds:</strong> Entering your UPI PIN always debits your account. Receiving a payment or refund never requires authorization.</li>
+            <li><strong>Never demand remote screen-sharing software:</strong> Genuine technical support will never instruct you to install AnyDesk, TeamViewer, or QuickSupport to fix a payment.</li>
+          </ul>
+          <a href="after-scam.html" class="btn btn-terracotta btn-sm">Read Post-Incident Action Guide</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="brand-name" style="margin-bottom: 6px;">SCAMSHIELD</h4>
+          <p class="brand-tagline" style="margin-bottom: 14px;">Think Before You Click.</p>
+          <p class="body-secondary">
+            An undergraduate academic project developed for B.Sc. Information Technology students and general public awareness. Focused on clean, student-explainable code and practical digital safety.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Learn</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Scam Lifecycle</a></li>
+            <li><a href="scams.html">All Scam Types</a></li>
+            <li><a href="phishing.html">Phishing Identification</a></li>
+            <li><a href="upi-scams.html">UPI Payment Safety</a></li>
+            <li><a href="banking-scams.html">Banking and OTP</a></li>
+            <li><a href="social-media-scams.html">Social Media Traps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Tools</h5>
+          <ul class="footer-links">
+            <li><a href="simulator.html">Scam Simulator</a></li>
+            <li><a href="link-checker.html">Link Checker</a></li>
+            <li><a href="quiz.html">Safety Quiz</a></li>
+            <li><a href="password-safety.html">Password Checker</a></li>
+            <li><a href="checklist.html">Safety Checklist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Emergency Help</h5>
+          <p class="body-secondary" style="margin-bottom: 10px;">
+            National Cyber Crime Helpline (India): <strong>1930</strong>
+          </p>
+          <p class="body-secondary" style="margin-bottom: 14px;">
+            Official Portal: <strong>cybercrime.gov.in</strong>
+          </p>
+          <div class="btn-group">
+            <a href="after-scam.html" class="btn btn-secondary btn-sm">Incident Guide</a>
+            <a href="feedback.html" class="btn btn-secondary btn-sm">Project Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>SCAMSHIELD Academic Project - B.Sc. Information Technology (Year 2)</div>
+        <div>Designed with HTML5, CSS3, and Vanilla JavaScript. No tracking, purely educational.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

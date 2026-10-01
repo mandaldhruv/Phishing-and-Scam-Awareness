@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Safety Checklist | SCAMSHIELD</title>
+  <meta name="description" content="An interactive security checklist for links, UPI payments, phone calls, and account hygiene. Check your daily security posture in real time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand">
+          <span class="brand-name">SCAMSHIELD</span>
+          <span class="brand-tagline">Think Before You Click.</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link">Learn</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="about.html">About Fraud Lifecycle</a></li>
+              <li class="dropdown-item"><a href="scams.html">Common Scam Types</a></li>
+              <li class="dropdown-item"><a href="phishing.html">Phishing Awareness</a></li>
+              <li class="dropdown-item"><a href="upi-scams.html">UPI and Payment Scams</a></li>
+              <li class="dropdown-item"><a href="banking-scams.html">Banking and OTP Frauds</a></li>
+              <li class="dropdown-item"><a href="social-media-scams.html">Social Media Traps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="checklist.html" class="nav-link active">Tools</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="simulator.html">Scam Simulator</a></li>
+              <li class="dropdown-item"><a href="link-checker.html">Suspicious Link Checker</a></li>
+              <li class="dropdown-item"><a href="quiz.html">Cyber Safety Quiz</a></li>
+              <li class="dropdown-item"><a href="password-safety.html">Password Strength Checker</a></li>
+              <li class="dropdown-item"><a href="checklist.html">Interactive Safety Checklist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="after-scam.html" class="nav-link">Safety Guide</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Tools</span>
+        <span>/</span>
+        <span>Safety Checklist</span>
+      </nav>
+      <h1 class="page-title">Interactive Digital Safety Checklist</h1>
+      <p class="page-lead">
+        A practical set of mental verification checkpoints before opening links, authorizing payments, or speaking with unfamiliar callers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container container-narrow">
+
+      <!-- Status Bar -->
+      <div class="card card-accent-sage" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span class="meta-label">Checklist Progress</span>
+          <div id="checklistProgressText" style="font-size: 16px; font-weight: 700; color: var(--color-charcoal); margin-top: 4px;">
+            Completed 0 of 16 checks (0%)
+          </div>
+        </div>
+        <button type="button" id="btnResetChecklist" class="btn btn-secondary btn-sm">Reset All Checks</button>
+      </div>
+
+      <!-- Checklist Wrapper -->
+      <div id="safetyChecklist">
+
+        <!-- Category A -->
+        <div style="margin-bottom: 32px;">
+          <h2 class="card-title" style="margin-bottom: 12px;">Part 1: Before Clicking Any Link</h2>
+          
+          <label class="checklist-item">
+            <input type="checkbox" id="check_0">
+            <span class="checklist-label">Did I independently verify who sent this message?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_1">
+            <span class="checklist-label">Is the communication expected, or did it arrive out of the blue?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_2">
+            <span class="checklist-label">Does the actual domain name match the company's verified official portal?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_3">
+            <span class="checklist-label">Is there an artificial deadline urging me to act within minutes or hours?</span>
+          </label>
+        </div>
+
+        <!-- Category B -->
+        <div style="margin-bottom: 32px;">
+          <h2 class="card-title" style="margin-bottom: 12px;">Part 2: Before Authorizing a UPI or Card Payment</h2>
+          
+          <label class="checklist-item">
+            <input type="checkbox" id="check_4">
+            <span class="checklist-label">Do I understand that receiving money never requires entering my UPI PIN?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_5">
+            <span class="checklist-label">Have I verified the exact name of the recipient displayed by NPCI before confirming?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_6">
+            <span class="checklist-label">Did I reject any incoming "Collect Request" disguised as a refund?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_7">
+            <span class="checklist-label">Did I avoid scanning any QR code sent over WhatsApp or SMS?</span>
+          </label>
+        </div>
+
+        <!-- Category C -->
+        <div style="margin-bottom: 32px;">
+          <h2 class="card-title" style="margin-bottom: 12px;">Part 3: When Contacted by an Unknown Caller</h2>
+          
+          <label class="checklist-item">
+            <input type="checkbox" id="check_8">
+            <span class="checklist-label">Did I remember that banks and police never request OTPs or passwords over the phone?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_9">
+            <span class="checklist-label">Did I refuse to install remote control apps like AnyDesk or TeamViewer?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_10">
+            <span class="checklist-label">Did I independently verify the caller by hanging up and calling the number on my bank card?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_11">
+            <span class="checklist-label">Did I refrain from disclosing personal details like Date of Birth and Aadhaar/PAN?</span>
+          </label>
+        </div>
+
+        <!-- Category D -->
+        <div style="margin-bottom: 32px;">
+          <h2 class="card-title" style="margin-bottom: 12px;">Part 4: Digital Device and Account Hygiene</h2>
+          
+          <label class="checklist-item">
+            <input type="checkbox" id="check_12">
+            <span class="checklist-label">Are two-factor authenticators enabled on my primary email and banking accounts?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_13">
+            <span class="checklist-label">Do I have unique passwords across all my critical personal accounts?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_14">
+            <span class="checklist-label">Are operating system and browser security updates installed on my devices?</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox" id="check_15">
+            <span class="checklist-label">Do I avoid logging into financial portals over unsecured public Wi-Fi networks?</span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="card card-accent-charcoal" style="background-color: var(--color-white); padding: 24px; margin-top: 16px;">
+        <span class="meta-label">Reminder</span>
+        <h3 class="card-title-sm">Habit Formation</h3>
+        <p class="body-secondary" style="margin-top: 4px;">
+          Reviewing this checklist mentally before any unfamiliar transaction takes less than ten seconds, but protects against virtually all common social-engineering attacks.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="brand-name" style="margin-bottom: 6px;">SCAMSHIELD</h4>
+          <p class="brand-tagline" style="margin-bottom: 14px;">Think Before You Click.</p>
+          <p class="body-secondary">
+            B.Sc. Information Technology academic project designed for undergraduate viva demonstration and public cybersecurity education.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Learn</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Scam Lifecycle</a></li>
+            <li><a href="scams.html">All Scam Types</a></li>
+            <li><a href="phishing.html">Phishing Identification</a></li>
+            <li><a href="upi-scams.html">UPI Payment Safety</a></li>
+            <li><a href="banking-scams.html">Banking and OTP</a></li>
+            <li><a href="social-media-scams.html">Social Media Traps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Tools</h5>
+          <ul class="footer-links">
+            <li><a href="simulator.html">Scam Simulator</a></li>
+            <li><a href="link-checker.html">Link Checker</a></li>
+            <li><a href="quiz.html">Safety Quiz</a></li>
+            <li><a href="password-safety.html">Password Checker</a></li>
+            <li><a href="checklist.html">Safety Checklist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Emergency Help</h5>
+          <p class="body-secondary" style="margin-bottom: 10px;">
+            National Cyber Crime Helpline (India): <strong>1930</strong>
+          </p>
+          <p class="body-secondary" style="margin-bottom: 14px;">
+            Official Portal: <strong>cybercrime.gov.in</strong>
+          </p>
+          <div class="btn-group">
+            <a href="after-scam.html" class="btn btn-secondary btn-sm">Incident Guide</a>
+            <a href="feedback.html" class="btn btn-secondary btn-sm">Project Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>SCAMSHIELD Academic Project - B.Sc. Information Technology (Year 2)</div>
+        <div>Designed with HTML5, CSS3, and Vanilla JavaScript. No tracking, purely educational.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness | SCAMSHIELD</title>
+  <meta name="description" content="Learn how to spot deceptive phishing emails, SMS smishing traps, and fake login domains. Features an annotated educational email simulation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand">
+          <span class="brand-name">SCAMSHIELD</span>
+          <span class="brand-tagline">Think Before You Click.</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="phishing.html" class="nav-link active">Learn</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="about.html">About Fraud Lifecycle</a></li>
+              <li class="dropdown-item"><a href="scams.html">Common Scam Types</a></li>
+              <li class="dropdown-item"><a href="phishing.html">Phishing Awareness</a></li>
+              <li class="dropdown-item"><a href="upi-scams.html">UPI and Payment Scams</a></li>
+              <li class="dropdown-item"><a href="banking-scams.html">Banking and OTP Frauds</a></li>
+              <li class="dropdown-item"><a href="social-media-scams.html">Social Media Traps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="simulator.html" class="nav-link">Tools</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="simulator.html">Scam Simulator</a></li>
+              <li class="dropdown-item"><a href="link-checker.html">Suspicious Link Checker</a></li>
+              <li class="dropdown-item"><a href="quiz.html">Cyber Safety Quiz</a></li>
+              <li class="dropdown-item"><a href="password-safety.html">Password Strength Checker</a></li>
+              <li class="dropdown-item"><a href="checklist.html">Interactive Safety Checklist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="after-scam.html" class="nav-link">Safety Guide</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Learn</span>
+        <span>/</span>
+        <span>Phishing Awareness</span>
+      </nav>
+      <h1 class="page-title">Phishing Awareness and Detection</h1>
+      <p class="page-lead">
+        Learn how spoofed emails, counterfeit websites, and SMS lures trick users, and understand the anatomical red flags hidden inside deceptive messages.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Four Forms of Phishing -->
+      <div style="margin-bottom: 48px;">
+        <span class="meta-label">Delivery Channels</span>
+        <h2 class="section-title">The Four Primary Forms of Phishing</h2>
+        <p class="section-subtitle">
+          Attackers adapt their delivery method depending on user devices and the information they intend to harvest.
+        </p>
+
+        <div class="grid grid-4">
+          <div class="card card-accent-sage">
+            <h3 class="card-title-sm">Email Phishing</h3>
+            <p class="body-secondary">
+              Mass emails spoofing recognized companies (banks, cloud services, streaming portals) designed to direct recipients to fake login pages.
+            </p>
+          </div>
+
+          <div class="card card-accent-terracotta">
+            <h3 class="card-title-sm">Smishing (SMS)</h3>
+            <p class="body-secondary">
+              Short text messages warning of courier issues, traffic fines, or electricity disconnection with shortened links (bit.ly, tinyurl).
+            </p>
+          </div>
+
+          <div class="card card-accent-charcoal">
+            <h3 class="card-title-sm">Vishing (Voice)</h3>
+            <p class="body-secondary">
+              Live phone calls where the fraudster impersonates law enforcement, telecom operators, or bank security teams to extract OTPs.
+            </p>
+          </div>
+
+          <div class="card card-accent-sage">
+            <h3 class="card-title-sm">Clone Phishing</h3>
+            <p class="body-secondary">
+              Legitimate emails previously sent are copied by attackers, with authentic attachments or links swapped for malicious lookalikes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Educational Simulation: Anatomy of a Phishing Email -->
+      <div style="margin-bottom: 56px;">
+        <span class="meta-label">Educational Demonstration</span>
+        <h2 class="section-title">Anatomy of a Phishing Message</h2>
+        <p class="section-subtitle">
+          Examine this simulated fraudulent communication. Notice how multiple subtle indicators reveal the deception.
+        </p>
+
+        <div class="message-simulation" style="border: 2px solid var(--color-border-dark);">
+          <div class="message-header">
+            <div>
+              <span class="tag tag-danger" style="margin-right: 8px;">Educational Simulation</span>
+              <strong>From:</strong> State Bank Security Alert &lt;security-alert@sbi-online-service29.tk&gt;
+            </div>
+            <div>Date: Today, 08:42 AM</div>
+          </div>
+          
+          <div style="padding: 8px 0; border-bottom: 1px solid var(--color-border); font-size: 13px; margin-bottom: 12px; color: var(--color-brown);">
+            <strong>Subject:</strong> [CRITICAL] Your Internet Banking Access Will Be Terminated in 12 Hours
+          </div>
+
+          <div class="message-body" style="font-size: 14.5px;">
+            Dear Valued Customer,
+            <br><br>
+            Our automated monitoring system detected suspicious login attempts on your net banking profile from an unauthorized IP address in Singapore. As per Reserve Bank regulations, your access has been temporarily restricted.
+            <br><br>
+            To restore full account functionality and prevent permanent cancellation, you must confirm your KYC identification details immediately by clicking the official security link below:
+            <br><br>
+            <div style="background-color: var(--color-ivory); padding: 10px 14px; border-left: 3px solid var(--color-danger); margin: 8px 0;">
+              <span class="message-fake-link">http://sbi-online-service29.tk/login/verify-credentials.php</span>
+            </div>
+            <br>
+            Failure to complete this verification within 12 hours will result in permanent debit card suspension and a penalty fee of Rs. 1,200.
+            <br><br>
+            Sincerely,<br>
+            Central Security &amp; Compliance Team
+          </div>
+        </div>
+
+        <!-- Annotation Breakdown -->
+        <div class="grid grid-3" style="margin-top: 24px;">
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-danger" style="margin-bottom: 6px;">Red Flag 01</span>
+            <h4 class="card-title-sm">Deceptive Sender Address</h4>
+            <p class="body-secondary">
+              While the display name says "State Bank", the actual domain is <strong>sbi-online-service29.tk</strong>. Official banks operate on verified registered domains (e.g. sbi.co.in or onlinesbi.sbi), never on free .tk extensions.
+            </p>
+          </div>
+
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-danger" style="margin-bottom: 6px;">Red Flag 02</span>
+            <h4 class="card-title-sm">Manufactured Panic</h4>
+            <p class="body-secondary">
+              Phrases like "Will Be Terminated in 12 Hours" and threats of penalty fees bypass rational thought. Legitimate financial institutions never use countdown threats to force login entries.
+            </p>
+          </div>
+
+          <div class="card card-accent-terracotta">
+            <span class="tag tag-danger" style="margin-bottom: 6px;">Red Flag 03</span>
+            <h4 class="card-title-sm">Insecure &amp; Spoofed Link</h4>
+            <p class="body-secondary">
+              The hyperlink uses unencrypted <strong>http://</strong> rather than https, and leads to an arbitrary server path rather than the genuine bank portal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Six Key Red Flags to Notice -->
+      <div style="margin-bottom: 48px;">
+        <span class="meta-label">Detection Checklist</span>
+        <h2 class="section-title">Six Red Flags to Look For</h2>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">01</span>
+              <h3 class="card-title-sm">Mismatched or Lookalike Domains</h3>
+            </div>
+            <p class="body-secondary">
+              Carefully inspect the letters in the domain name. Scammers use typosquatting such as replacing "o" with "0", "l" with "1", or adding words like "support-bank.com" instead of "bank.com".
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">02</span>
+              <h3 class="card-title-sm">Generic or Missing Greetings</h3>
+            </div>
+            <p class="body-secondary">
+              Legitimate organizations where you hold an account usually address you by your registered name or account number prefix. Be cautious of emails starting with "Dear Valued Customer" or "Dear User".
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">03</span>
+              <h3 class="card-title-sm">Demands for Passwords or PINs</h3>
+            </div>
+            <p class="body-secondary">
+              No genuine customer support agent or security alert requires you to send your password, CVV, or one-time password back in an email, form, or chat window.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">04</span>
+              <h3 class="card-title-sm">Unexpected Attachments</h3>
+            </div>
+            <p class="body-secondary">
+              Be extremely cautious of unexpected files ending in .exe, .scr, .zip, or .iso. Even invoices sent as Word or Excel files (.docm, .xlsm) can contain malicious automated macro scripts.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">05</span>
+              <h3 class="card-title-sm">Spelling and Grammatical Errors</h3>
+            </div>
+            <p class="body-secondary">
+              Poor phrasing, irregular capitalization, or awkward translations frequently occur in mass fraudulent campaigns launched from automated templates.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="rule-header">
+              <span class="rule-number">06</span>
+              <h3 class="card-title-sm">Sense of Uncompromising Urgency</h3>
+            </div>
+            <p class="body-secondary">
+              Whenever a message warns that your funds will disappear, legal action will begin, or your account will close in minutes, pause immediately. Urgency is the fraudster's strongest weapon.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Box -->
+      <div class="card card-accent-sage" style="background-color: var(--color-white); padding: 32px;">
+        <span class="meta-label">Practical Rule</span>
+        <h3 class="card-title">How to Safely Handle Suspicious Messages</h3>
+        <p class="body-normal" style="margin-bottom: 14px;">
+          If an email or SMS raises even the slightest doubt:
+        </p>
+        <ol style="padding-left: 20px; line-height: 1.8; color: var(--color-charcoal); margin-bottom: 16px;">
+          <li>Do not click any embedded link or open attachments.</li>
+          <li>Do not reply to the message or call phone numbers mentioned in the message body.</li>
+          <li>Open your web browser manually, navigate to the official website from a trusted bookmark, and log in to inspect your account notifications.</li>
+          <li>Contact the organization via the official customer support telephone number printed on your physical card or monthly bank statement.</li>
+        </ol>
+        <div class="btn-group">
+          <a href="link-checker.html" class="btn btn-primary btn-sm">Use URL Heuristic Checker</a>
+          <a href="simulator.html" class="btn btn-secondary btn-sm">Practice in Simulator</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="brand-name" style="margin-bottom: 6px;">SCAMSHIELD</h4>
+          <p class="brand-tagline" style="margin-bottom: 14px;">Think Before You Click.</p>
+          <p class="body-secondary">
+            B.Sc. Information Technology academic project designed for undergraduate viva demonstration and public cybersecurity education.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Learn</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Scam Lifecycle</a></li>
+            <li><a href="scams.html">All Scam Types</a></li>
+            <li><a href="phishing.html">Phishing Identification</a></li>
+            <li><a href="upi-scams.html">UPI Payment Safety</a></li>
+            <li><a href="banking-scams.html">Banking and OTP</a></li>
+            <li><a href="social-media-scams.html">Social Media Traps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Tools</h5>
+          <ul class="footer-links">
+            <li><a href="simulator.html">Scam Simulator</a></li>
+            <li><a href="link-checker.html">Link Checker</a></li>
+            <li><a href="quiz.html">Safety Quiz</a></li>
+            <li><a href="password-safety.html">Password Checker</a></li>
+            <li><a href="checklist.html">Safety Checklist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title">Emergency Help</h5>
+          <p class="body-secondary" style="margin-bottom: 10px;">
+            National Cyber Crime Helpline (India): <strong>1930</strong>
+          </p>
+          <p class="body-secondary" style="margin-bottom: 14px;">
+            Official Portal: <strong>cybercrime.gov.in</strong>
+          </p>
+          <div class="btn-group">
+            <a href="after-scam.html" class="btn btn-secondary btn-sm">Incident Guide</a>
+            <a href="feedback.html" class="btn btn-secondary btn-sm">Project Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>SCAMSHIELD Academic Project - B.Sc. Information Technology (Year 2)</div>
+        <div>Designed with HTML5, CSS3, and Vanilla JavaScript. No tracking, purely educational.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
