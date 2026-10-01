@@ -21,13 +21,74 @@ document.addEventListener('DOMContentLoaded', function () {
 function initNavigation() {
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  function closeMenu() {
+    if (navMenu && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+      if (navBackdrop) navBackdrop.classList.remove('visible');
+      document.body.classList.remove('menu-open');
+    }
+  }
+
+  function openMenu() {
+    if (navMenu) {
+      navMenu.classList.add('open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+      if (navBackdrop) navBackdrop.classList.add('visible');
+      document.body.classList.add('menu-open');
+    }
+  }
 
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', function () {
-      const isExpanded = navMenu.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isExpanded);
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
   }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMenu);
+  }
+
+  // Handle Escape key to close mobile menu
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  // Handle dropdown accordions on mobile / tablet (<= 1024px)
+  const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+  dropdownItems.forEach(function (dropdown) {
+    const trigger = dropdown.querySelector('.nav-link');
+    const submenu = dropdown.querySelector('.dropdown-menu');
+
+    if (trigger && submenu) {
+      trigger.addEventListener('click', function (e) {
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          const isExpanded = submenu.classList.toggle('mobile-expanded');
+          trigger.setAttribute('aria-expanded', isExpanded);
+        }
+      });
+    }
+  });
+
+  // Close mobile menu when clicking a direct link or submenu link
+  const allNavLinks = document.querySelectorAll('.nav-link:not(.dropdown > .nav-link), .dropdown-item a');
+  allNavLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 1024) {
+        closeMenu();
+      }
+    });
+  });
 
   // Highlight active page link based on location pathname
   const rawPath = window.location.pathname.split('/').pop() || 'index.html';

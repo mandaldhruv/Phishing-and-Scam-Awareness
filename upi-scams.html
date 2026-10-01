@@ -22,7 +22,12 @@
         </a>
 
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          Menu
+          <span class="nav-toggle-bars" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+          <span class="nav-toggle-label">Menu</span>
         </button>
 
         <ul class="nav-menu" id="navMenu">
@@ -30,7 +35,7 @@
             <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="upi-scams.html" class="nav-link active">Learn</a>
+            <a href="upi-scams.html" class="nav-link active">Learn <span class="dropdown-arrow">&#9662;</span></a>
             <ul class="dropdown-menu">
               <li class="dropdown-item"><a href="about.html">About Fraud Lifecycle</a></li>
               <li class="dropdown-item"><a href="scams.html">Common Scam Types</a></li>
@@ -41,7 +46,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="simulator.html" class="nav-link">Tools</a>
+            <a href="simulator.html" class="nav-link">Tools <span class="dropdown-arrow">&#9662;</span></a>
             <ul class="dropdown-menu">
               <li class="dropdown-item"><a href="simulator.html">Scam Simulator</a></li>
               <li class="dropdown-item"><a href="link-checker.html">Suspicious Link Checker</a></li>
@@ -63,6 +68,7 @@
       </nav>
     </div>
   </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- Page Header -->
   <section class="page-header">
