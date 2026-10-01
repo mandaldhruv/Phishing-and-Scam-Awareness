@@ -1,0 +1,30 @@
+{
+  "hosting": [
+    {
+      "site": "scamshield-app",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        ".firebaserc",
+        "**/.*",
+        "backend/**",
+        "*.class"
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false
+    },
+    {
+      "site": "phishing-and-scam-awareness",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        ".firebaserc",
+        "**/.*",
+        "backend/**",
+        "*.class"
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false
+    }
+  ]
+}

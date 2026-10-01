@@ -30,12 +30,13 @@ function initNavigation() {
   }
 
   // Highlight active page link based on location pathname
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = rawPath.endsWith('.html') ? rawPath : (rawPath + '.html');
   const navLinks = document.querySelectorAll('.nav-link, .dropdown-item a');
   
   navLinks.forEach(function (link) {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (href === currentPath || (currentPath === 'index.html' && (href === 'index.html' || href === ''))) {
       link.classList.add('active');
       const parentDropdown = link.closest('.dropdown');
       if (parentDropdown) {
